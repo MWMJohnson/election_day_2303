@@ -2,11 +2,12 @@ require "rspec"
 require "./lib/candidate"
 
 RSpec.describe Candidate do
+
   before(:each) do 
     @diana = Candidate.new({name: "Diana D", party: :democrat})
   end
 
-  describe "#initialize" do 
+  describe "#initialize(details)" do 
     it "exists" do 
       expect(@diana).to be_a(Candidate)
     end
@@ -17,7 +18,7 @@ RSpec.describe Candidate do
       expect(@diana.votes).to eq(0)
     end
   end
-  
+
   describe "#vote_for!" do 
     it "adds a vote for the candidate" do 
       expect(@diana.votes).to eq(0)
