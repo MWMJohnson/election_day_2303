@@ -3,13 +3,13 @@ require "./lib/candidate"
 require "./lib/race"
 
 RSpec.describe Race do
-  
+
   before(:each) do 
     @diana = Candidate.new({name: "Diana D", party: :democrat})
     @race = Race.new("Texas Governor")
   end
 
-  describe "#initialize" do 
+  describe "#initialize(office)" do 
     it "exists" do 
       expect(@race).to be_a(Race)
     end
@@ -20,7 +20,7 @@ RSpec.describe Race do
     end
   end
 
-  describe "#register_candidate!" do
+  describe "#register_candidate!(details)" do
     it "registers a candidate" do
       expect(@race.candidates).to eq([])
 
