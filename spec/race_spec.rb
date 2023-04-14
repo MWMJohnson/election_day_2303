@@ -3,6 +3,7 @@ require "./lib/candidate"
 require "./lib/race"
 
 RSpec.describe Race do
+  
   before(:each) do 
     @diana = Candidate.new({name: "Diana D", party: :democrat})
     @race = Race.new("Texas Governor")
@@ -36,5 +37,4 @@ RSpec.describe Race do
     end
   end
 
-  
 end
