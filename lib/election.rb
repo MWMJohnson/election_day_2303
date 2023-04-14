@@ -8,6 +8,17 @@ class Election
   end
 
   def add_race(race)
+    @races << race
+    @races
+  end
+
+  def candidates
+    @races.flat_map do |race|
+      race.candidates
+    end
+  end
+
+  def vote_counts
     
   end
 
